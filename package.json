@@ -15,6 +15,7 @@
     "@types/rx": "^4.1.1",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
+    "node-inspector": "^0.12.8",
     "nodemon": "^1.11.0",
     "sinon": "^1.17.7",
     "ts-node": "^2.0.0"
@@ -23,7 +24,8 @@
     "test": "node_modules/mocha/bin/mocha --compilers ts:ts-node/register,tsx:ts-node/register src/**/*.test.ts",
     "start": "npm run build:live",
     "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
-    "prepublish": "tsc"
+    "prepublish": "tsc",
+    "debug": "node --debug-brk dist/index.js | node-inspector"
   },
   "keywords": [],
   "author": "",

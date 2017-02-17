@@ -27,6 +27,7 @@
     "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
     "prepublish": "tsc",
     "prepublish:live": "tsc --watch",
+    "docs": "cd src; ../node_modules/typedoc/bin/typedoc --module commonjs --target ES6 --out ../doc/ ./; cd ..",
     "debug": "node --debug-brk dist/index.js | node-inspector"
   },
   "keywords": [],
